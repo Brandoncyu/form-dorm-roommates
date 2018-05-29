@@ -2,7 +2,7 @@ const data = require('./data')
 const templates = require('./templates')
 
 function showAll (container) {
-  const cards = data.map(roommate => templates.card(roommate)).join('')
+  const cards = data.map((roommate, index) => templates.card(roommate, index)).join('')
   container.innerHTML = cards
 }
 
